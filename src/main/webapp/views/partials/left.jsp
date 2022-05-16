@@ -1,33 +1,71 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div class="container">
 
-<jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<com.ute.auctionwebapp.beans.Category>"/>
+    <section class="section-content py-3">
+        <div class="row">
+            <aside class="">
+                <!-- ============= COMPONENT ============== -->
+                <nav class="sidebar card">
+                    <ul class="nav flex-column" id="nav_accordion">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Danh mục sản phẩm </a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Đồ cổ <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Đồ cổ loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Đồ cổ loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Điện thoại <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Điện thoại loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Điện thoại loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Sách <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Sách loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Sách loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Thời trang <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Thời trang loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Thời trang loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Đồ gia dụng <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Đồ gia dụng loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Đồ gia dụng loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Bất động sản <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Bất động sản loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Bất động sản loại 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"> Phương tiện <i class="bi small bi-caret-down-fill"></i> </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#">Phương tiện loại 1 </a></li>
+                                <li><a class="nav-link" href="#">Phương tiện loại 2 </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ============= COMPONENT END// ============== -->
+            </aside>
+            <main class="col-lg-9">
 
-<div class="card">
-    <h4 class="card-header">
-        Danh mục đấu giá
-    </h4>
-    <c:forEach items="${categoriesWithDetails}" var="c">
-        <a href="${pageContext.request.contextPath}/item/byCat?id=${c.catID}"
-           class="list-group-item list-group-item-action">
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-                ${c.catName}
-        </a>
-    </c:forEach>
-</div>
+            </main>
+        </div>
+    </section>
 
-<div class="card mt-3">
-    <h4 class="card-header">
-        Featured
-    </h4>
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            The current link item (edited)
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-        <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A
-            disabled link item</a>
-    </div>
 </div>
